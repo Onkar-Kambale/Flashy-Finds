@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashyFinds - Your Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FlashyFinds</div>
+                <div class="cart-icon" id="cartIcon">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="shop-content">
+            <aside class="filters">
+                <div class="filter-section">
+                    <h3 class="filter-title">Categories</h3>
+                    <div class="filter-options" id="categoryFilters">
+
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h3 class="filter-title">Price Range</h3>
+                    <div class="filter-options">
+                        <input type="range" id="priceRange" min="0" max="50000" step="500" value="50000">
+                        <div class="price-range-labels">
+                            <span>₹0</span>
+                            <span>₹50000</span>
+                        </div>
+                        <div class="price-display">Up to: ₹<span id="priceValue">50000</span></div>
+                    </div>
+                </div>
+                
+                
+                <div class="filter-section">
+                    <h3 class="filter-title">Rating</h3>
+                    <div class="filter-options" id="ratingFilters">
+                        <label>
+                            <input type="checkbox" class="rating-checkbox" value="4"> 4★ & Above
+                        </label>
+                        <label>
+                            <input type="checkbox" class="rating-checkbox" value="3"> 3★ & Above
+                        </label>
+                        <label>
+                            <input type="checkbox" class="rating-checkbox" value="2"> 2★ & Above
+                        </label>
+                    </div>
+                </div>
+                
+                <button class="clear-filters" id="clearFilters">Clear All Filters</button>
+            </aside>
+            
+            <section class="products-container">
+                <div class="products-header">
+                    <div class="products-count" id="productsCount">Showing 0 products</div>
+                    <select class="sort-select" id="sortSelect">
+                        <option value="default">Sort by: Featured</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating">Rating: High to Low</option>
+                    </select>
+                </div>
+                
+                <div class="products-grid" id="productsGrid">
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="container">
+        <div class="copyright">
+            © 2025 FlashyFinds. All rights reserved.
+        </div>
+    </footer>
+    
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart" id="closeCart">×</button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+            </div>
+            
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">₹0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
